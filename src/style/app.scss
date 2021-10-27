@@ -1,0 +1,250 @@
+* {
+    padding: 0;
+    margin: 0;
+    left: 0;
+    color: #2c2c2c;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+.register-wrapper {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    background: url(https://i.yapx.ru/GuYDB.gif) no-repeat center top / cover;
+    left: 0;
+    .register-block {
+        border-radius: 10px;
+        padding: 15px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #f1f1f1;
+        h2 {
+            text-align: center;
+        }
+        &__input {
+            margin: 25px 0px;
+        }
+        input {
+            text-align: center;
+            outline: none;
+            display: block;
+            width: 300px;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: none;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.219);
+        }
+    }
+}
+.button {
+    outline: none;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    width: 100%;
+    padding: 16px;
+    border-radius: 10px;
+    color: #f1f1f1;
+    background: #2c447e;
+}
+
+.mafia-game {
+    display: grid;
+    grid-template-columns: 1fr 0.35fr;
+    height: 100vh;
+    &__window {
+        background: url(../assets/noch.jpg) no-repeat center top / cover;
+    }
+    &__chatroom {
+        height: 100vh;
+        position: relative;
+        background: #2b2b2b;
+    }
+    .chatroom-users {
+        padding: 10px 0px;
+        &__count {
+            padding: 0px 30px;
+            text-align: right;
+        }
+        &__list {
+            padding: 25px;
+            height: 300px;
+            overflow: hidden;
+            overflow-y: scroll;
+            ul {
+                padding: 10px 0px;
+                li {
+                    padding: 10px 0px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-top: 1px solid #f1f1f1;
+                    &:last-child {
+                        border-bottom: 1px solid #f1f1f1;
+                    }
+                }
+            }
+        }
+        p {
+            color: #f1f1f1;
+        }
+        span {
+            color: #f1f1f1;
+        }
+        .online {
+            color: green;
+        }
+    }
+    .chatroom-title {
+        display: flex;
+        justify-content: space-between;
+        padding: 25px;
+        background: #141414;
+        box-shadow: 0px 3px 21px -11px #000;
+        .online-count {
+            margin-top: 10px;
+        }
+        p {
+            font-weight: bold;
+            color: #f1f1f1;
+            span {
+                font-weight: bold;
+                color: #f1f1f1;
+            }
+        }
+    }
+}
+.chat-window {
+    padding: 10px 10px 0px 10px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 40%;
+    background: #141414;
+    box-shadow: 0px 3px 21px -11px #000;
+    .input-container {
+        display: grid;
+        grid-template-columns: 1fr 0.2fr;
+        border-top: 5px solid #141414;
+        input {
+            background: #2b2b2b;
+            color: #f1f1f1;
+            border: none;
+            padding: 9px;
+            outline: none;
+        }
+    }
+    &__wrapper {
+        position: relative;
+        background: #2b2b2b;
+        height: 85%;
+        padding: 5px;
+        overflow-y: hidden;
+        overflow-y: scroll;
+        .message {
+            background: #141414;
+            padding: 15px;
+            border-radius: 10px;
+            width: 70%;
+            margin: 8px 0px;
+            &.this {
+                margin-left: auto;
+                background: #1414146b;
+            }
+            &.admin {
+                text-align: center;
+                width: 100%;
+                border-bottom: 1px solid #fff;
+                border-radius: 0;
+                background: none;
+                margin-left: auto;
+            }
+        }
+        div {
+            font-weight: 300;
+            color: #fff;
+        }
+    }
+}
+
+.mafia-game__window {
+    padding: 30px;
+    .mafia-game__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        &__item {
+            max-width: 200px;
+            width: 100%;
+            margin: 10px;
+            p {
+                color: #fff;
+                text-align: center;
+                font-weight: 300;
+                span {
+                    color: #fff;
+                }
+            }
+            .title {
+                margin-top: 10px;
+                background: #2b2b2b;
+                padding: 10px;
+                border-radius: 100px;
+            }
+            .card {
+                height: 200px;
+                background: url(../assets/avatar.png) no-repeat center top / cover;
+            }
+        }
+    }
+}
+
+.admin-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    a {
+        display: block;
+        margin: 10px;
+        background: #141414;
+        padding: 25px;
+        box-shadow: 0px 3px 21px -11px #000;
+        cursor: pointer;
+        color: #fff;
+        transition: 0.3s ease-out;
+        &:hover {
+            background: #2b2b2b;
+        }
+    }
+}
+
+.admin-users {
+    a {
+        cursor: pointer;
+        display: block;
+        padding: 4px;
+        max-width: 100px;
+        color: #fff;
+        font-weight: 300;
+        border-radius: 100px;
+        margin: 0 auto;
+        margin-top: 15px;
+        background: #ff000087;
+        transition: 0.3s ease-out;
+        &:hover {
+            background: #ff000033;
+        }
+    }
+}
+
+#app.active {
+    .mafia-game__window {
+        background: url(../assets/day.jpeg) no-repeat center top / cover;
+    }
+}
